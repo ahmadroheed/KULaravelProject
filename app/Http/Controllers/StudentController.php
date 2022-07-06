@@ -45,11 +45,7 @@ class StudentController extends Controller
     }
 
     public function show(){
-        return view('show');
-    }
-    public function show_students()
-    {
         $result = DB::table('students')->get();
-        return view('show',['students',$result]);
+        return view('show',['result'=>$result]);
     }
 }

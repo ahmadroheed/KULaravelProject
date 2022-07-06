@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($students as $student)
+            @foreach ($result as $student)
             <tr>
                 <th scope="row">{{$student->id}}</th>
                 <td>{{$student->student_name}}</td>
