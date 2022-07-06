@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ShowNotification;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/index',function(){
-    return view('index');
-});
+Route::get('/index', [StudentController::class,'index']);
 Route::get('/notifi',[ShowNotification::class,'Show']);
+Route::post('/save',[StudentController::class,'save']);
+Route::get('/show',[StudentController::class,'show']);
+
+
